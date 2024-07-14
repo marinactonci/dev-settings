@@ -1,4 +1,4 @@
-# Developper Settings
+# VSCode Settings
 
 This repository contains a custom `settings.json` file that enhances the UI of Visual Studio Code with specific fonts and other UI configurations.
 
