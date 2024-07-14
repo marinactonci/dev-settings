@@ -9,7 +9,7 @@
   // Change font
   "editor.fontFamily": "Geist Mono",
   "scm.inputFontFamily": "Geist Mono",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "chat.editor.fontFamily": "Geist Mono",
   "debug.console.fontFamily": "Geist Mono",
   "editor.codeLensFontFamily": "Geist Mono",
@@ -122,5 +122,7 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
-  "window.zoomLevel": 0.75
+  "window.zoomLevel": 0.75,
+
+  "liveServer.settings.donotShowInfoMsg": true
 }
