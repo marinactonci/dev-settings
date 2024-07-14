@@ -24,7 +24,7 @@ This repository contains a custom `settings.json` file that enhances the UI of V
 
 2. **Copy `settings.json`:**
    - Replace your existing `settings.json` file located in:
-     ```bash
+     ```sh
      ~/.config/Code/User/settings.json
      ```
    - Or open VSCode, go to `Preferences` > `Settings`, and choose `Open Settings (JSON)` to paste the contents.
