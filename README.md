@@ -29,6 +29,18 @@ This repository contains a custom `settings.json` file that enhances the UI of V
      ```
    - Or open VSCode, go to `Preferences` > `Settings`, and choose `Open Settings (JSON)` to paste the contents.
   
+3. **Update `keybinds.json`:**
+  - Open VSCode and go to `File` > `Preferences` > `Keyboard Shortcuts` and click on the icon in the top-right corner that opens the `keybinds.json` file.
+  - Copy and paste your custom keybinds into this file.
+
+4. **Update Neovim `init.vim`:**
+  - Ensure you have Neovim installed and the VSCode Neovim extension.
+  - Create or edit the init.vim file located at:
+    ```sh
+    ~/.config/nvim/init.vim
+    ```
+  - Add your custom Neovim configurations to this file.
+  
 ## Usage
 
 After installation, restart VSCode to apply the new settings. Ensure that the fonts mentioned are installed on your system.
