@@ -229,4 +229,4 @@ Reload configuration:
 source ~/.zshrc
 ```
 
-For more info follow the [blog post](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
+For more info follow the [blog post](https://www.josean.com/posts/how-to-setup-alacritty-terminal).
