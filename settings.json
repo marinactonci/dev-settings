@@ -9,7 +9,7 @@
   // Change font
   "editor.fontFamily": "Geist Mono",
   "scm.inputFontFamily": "Geist Mono",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
   "chat.editor.fontFamily": "Geist Mono",
   "debug.console.fontFamily": "Geist Mono",
   "editor.codeLensFontFamily": "Geist Mono",
