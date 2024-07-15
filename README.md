@@ -55,30 +55,178 @@ You can cherck whether homebrew is installed by running:
 brew --version
 ```
 
-## iTerm2
+## Alacritty
 
 ```bash
-brew install --cask iterm2
+brew install --cask alacritty
 ```
 
-## Install Oh My Zsh
+## Install font for icons
 
 ```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew install font-meslo-lg-nerd-font
 ```
 
-## Install PowerLevel10k theme for Oh My Zsh
+## Configure Alacritty
 
 ```bash
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+mkdir -p ~/.config/alacritty
+cd ~/.config/alacritty
+touch alacritty.toml
+nano alacritty.toml
 ```
 
-Open the `~/.zshrc` file with your preferred editor and change the value of `ZSH_THEME`:
+```
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "Buttonless"
+
+opacity = 0.8
+blur = true
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+size = 19
+```
+
+## Install PowerLevel10k theme
 
 ```bash
-ZSH_THEME="powerlevel10k/powerlevel10k"
+brew install powerlevel10k
+```
+
+Run the following command to add a line to `.zshrc` to set powerlevel10k as your theme:
+
+```bash
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+
+source ~/.zshrc
+```
+
+Choices:
+- Lean
+- Unicode
+- 8 colors
+- 24-hour format
+- Two lines
+- Dotted
+- Left
+- Black
+- Sparse
+- Many icons
+- Concise
+- Transient prompt: No
+- Verbose
+
+You can restart the powerlevel10k config by:
+```bash
+p10k configure
+```
+
+## Setup theme colors
+
+```bash
+git clone https://github.com/alacritty/alacritty-theme.git themes
+
+curl https://raw.githubusercontent.com/josean-dev/dev-environment-files/main/.config/alacritty/themes/themes/coolnight.toml --output ~/.config/alacritty/themes/themes/coolnight.toml
+```
+
+Open `alacritty.toml` file again and add the following code to the top of the file:
+
+```
+import = [
+  "~/.config/alacritty/themes/themes/coolnight.toml"
+]
+```
+
+## Better history completion
+
+```bash
+nano ~/.zshrc
+```
+
+Add the following code to the bottom of the file
+```
+# History setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 ```
 
 ```bash
 source ~/.zshrc
 ```
+
+## Zsh Autosuggestions
+
+```bash
+brew install zsh-autosuggestions
+
+echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
+
+## Zsh Syntax Highlighting
+
+```bash
+brew install zsh-syntax-highlighting
+
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
+
+## Better ls (eza)
+
+```bash
+brew install eza
+
+nano ~/.zshrc
+```
+
+Add following line to the bottom:
+
+```
+alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
+```
+
+Reload configuration:
+
+```bash
+source ~/.zshrc
+```
+
+## Better cd (zoxide)
+
+```bash
+brew install zoxide
+```
+
+Add the following two lines at the bottom:
+
+```
+alias cd="z"
+
+eval "$(zoxide init zsh)"
+```
+
+Reload configuration:
+
+```bash
+source ~/.zshrc
+```
+
+For more info follow the [blog post](https://www.josean.com/posts/how-to-setup-alacritty-terminal)
