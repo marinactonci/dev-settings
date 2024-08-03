@@ -1,19 +1,40 @@
 # VSCode Settings
 
-This repository contains a custom `settings.json` file that enhances the UI of Visual Studio Code with specific fonts and other UI configurations.
+This repository contains a custom `settings.json` files that enhance the UI of Visual Studio Code with specific fonts and other UI configurations.
 
-## Features
+## Features: `settings1.json`
+
+- **Theme**: React Theme
+- **Icon Theme**: Moxer Icons
+- **Fonts**:
+  - Editor: Geist Mono
+  - Terminal: JetBrainsMono Nerd Font
+- **UI Tweaks**:
+  - Minimap disabled
+  - Custom scrollbar settings
+  - Custom title bar and status bar
+  - Custom CSS and JS files
+  - Custom Command Pallete
+
+![Custom Home Page](settings1-1.png)
+
+![Custom Command Pallete](settings1-2.png)
+
+![View in a .tsx file](settings1-3.png)
+
+## Features: `settings2.json`
 
 - **Theme**: Aura Soft Dark (Soft Text)
 - **Icon Theme**: Moxer Icons
 - **Fonts**:
   - Editor: Geist Mono
   - Terminal: JetBrainsMono Nerd Font
-- **Font Size**: 14px
 - **UI Tweaks**:
   - Minimap disabled
   - Custom scrollbar settings
   - Custom title bar and status bar
+
+![View in a .tsx file](settings2.png)
 
 ## Installation
 
@@ -22,31 +43,21 @@ This repository contains a custom `settings.json` file that enhances the UI of V
    git clone https://github.com/marinactonci/vscode-settings.git
    ```
 
-2. **Copy `settings.json`:**
+2. **Copy either `settings1.json` or `settings2.json`:**
    - Replace your existing `settings.json` file located in:
      ```sh
      ~/.config/Code/User/settings.json
      ```
    - Or open VSCode, go to `Preferences` > `Settings`, and choose `Open Settings (JSON)` to paste the contents.
-  
-3. **Update `keybindings.json`:**
-  - Open VSCode and go to `File` > `Preferences` > `Keyboard Shortcuts` and click on the icon in the top-right corner that opens the `keybindings.json` file.
-  - Copy and paste your custom keybinds into this file.
 
-4. **Update Neovim `init.vim`:**
-  - Ensure you have Neovim installed and the VSCode Neovim extension.
-  - Create or edit the init.vim file located at:
-    ```sh
-    ~/.config/nvim/init.vim
-    ```
-  - Add your custom Neovim configurations to this file.
-  
+3. In case your selected to use the `settings1.json` you'll also need to install `Custom CSS and JS Loader` extension and inside of the `settings.json` change the paths to the custom css and js files to paths the files are located in on your system. Finally, open Command Pallete and run `Enable Custom CSS and JS`.
+
 ## Usage
 
 After installation, restart VSCode to apply the new settings. Ensure that the fonts mentioned are installed on your system.
 
 
-# MacOS Terminal 
+# MacOS Terminal
 
 ## Install Homebrew if you haven't already:
 
