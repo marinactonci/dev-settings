@@ -252,4 +252,6 @@ Reload configuration:
 source ~/.zshrc
 ```
 
+![Custom terminal](terminal.png)
+
 For more info follow the [blog post](https://www.josean.com/posts/how-to-setup-alacritty-terminal).
