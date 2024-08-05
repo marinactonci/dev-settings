@@ -16,11 +16,11 @@ This repository contains a custom `settings.json` files that enhance the UI of V
   - Custom CSS and JS files
   - Custom Command Pallete
 
-![Custom Home Page](settings1-1.png)
+![Custom Home Page](assets/settings1-1.png)
 
-![Custom Command Pallete](settings1-2.png)
+![Custom Command Pallete](assets/settings1-2.png)
 
-![View in a .tsx file](settings1-3.png)
+![View in a .tsx file](assets/settings1-3.png)
 
 ## Features: `settings2.json`
 
@@ -34,7 +34,7 @@ This repository contains a custom `settings.json` files that enhance the UI of V
   - Custom scrollbar settings
   - Custom title bar and status bar
 
-![View in a .tsx file](settings2.png)
+![View in a .tsx file](assets/settings2.png)
 
 ## Installation
 
@@ -252,6 +252,6 @@ Reload configuration:
 source ~/.zshrc
 ```
 
-![Custom terminal](terminal.png)
+![Custom terminal](assets/terminal.png)
 
 For more info follow the [blog post](https://www.josean.com/posts/how-to-setup-alacritty-terminal).
